@@ -58,7 +58,7 @@ Throughput, **bytes** | 0.98           | 6.72           | 30.37         | 43.64 
 Concurrency | 0.23           | 0.82           | 2.83          | 60.35           | Depends on concurrency attribute
 Successful transactions | 1140           | 2957           | 5670          | 4800            |
 Failed transactions | 0              | 0              | 0             | 0               |
-Longest transaction | 0.16           | 0.50           | 0.77          | 3.77            | Because of GC during c100 test, the longest transaction took much more time
+Longest transaction | 0.16           | 0.50           | 0.77          | 3.77            | Because of GC during c100 test and connections limit, the longest transaction took much more time
 Shortest transaction | 0.00           | 0.00           | 0.00          | 0.00            |
 
 ## Additional Grafana Dashboards
