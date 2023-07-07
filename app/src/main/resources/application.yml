@@ -1,0 +1,42 @@
+server:
+  port: ${SERVER_PORT}
+logging:
+  level:
+    ROOT: INFO
+    com.jdum.projector: DEBUG
+    org.springframework: INFO
+    org.mongodb: ERROR
+    io.micrometer: INFO
+spring:
+  jpa:
+    generate-ddl: true
+  datasource:
+    url: ${MYSQL_URL}
+    username: ${MYSQL_USER}
+    password: ${MYSQL_PASSWORD}
+    driverClassName: com.mysql.cj.jdbc.Driver
+  data:
+    mongodb:
+      uri: ${MONGODB_URL}
+      database: ${MONGODB_NAME}
+  jackson:
+    default-property-inclusion: non_null
+  devtools:
+    restart:
+      enabled: true
+      additional-exclude: static/**
+    livereload:
+      enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: [ "health","prometheus", "metrics" ]
+  endpoint:
+    health:
+      show-details: always
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true

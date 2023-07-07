@@ -1,0 +1,23 @@
+# config file version
+apiVersion: 1
+
+# list of datasources that should be deleted from the database
+deleteDatasources:
+  - name: Prometheus
+
+# list of datasources to insert/update depending
+# whats available in the database
+datasources:
+- name: Prometheus
+  type: prometheus
+  # Access mode - proxy (server in the UI) or direct (browser in the UI).
+  access: proxy
+  url: http://prometheus:9090
+  jsonData:
+  httpMethod: POST
+  manageAlerts: true
+  prometheusType: Prometheus
+  prometheusVersion: 2.44.0
+  cacheLevel: 'High'
+  incrementalQuerying: true
+  incrementalQueryOverlapWindow: 10m

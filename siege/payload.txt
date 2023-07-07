@@ -1,0 +1,8 @@
+{
+  "country": "Ukraine",
+  "city": "Kyiv",
+  "street": "Stepan Bandera, 71",
+  "phone": "+380991234125",
+  "email": "test@email.com",
+  "zipCode": "40009"
+}

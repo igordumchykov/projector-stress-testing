@@ -1,0 +1,7 @@
+URL=http://localhost:8080
+
+$(URL)/address/mysql/all
+$(URL)/address/mongo/all
+$(URL)/address POST < siege/payload.txt
+
+
